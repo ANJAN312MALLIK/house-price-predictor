@@ -1,0 +1,30 @@
+body {
+    font-family: "Pacifico", cursive;
+    padding: 20px;
+}
+
+.form-container {
+    background-color: #44444c;
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.label-highlight {
+    background-color: #fffae5;
+    display: block;
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.btn-primary {
+    padding: 10px 20px;
+}
+
+.prediction {
+    color: #db6307;
+    font-weight: bold;
+    margin-top: 20px;
+}
