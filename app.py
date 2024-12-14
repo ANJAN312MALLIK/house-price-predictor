@@ -107,7 +107,7 @@ st.markdown('<h3 class="sub-title">Enter Number of Bathrooms</h3>', unsafe_allow
 bath = st.slider('Enter Number of Bathrooms', 1, 10, 1)
 
 st.markdown('<h3 class="sub-title">Enter Square Feet</h3>', unsafe_allow_html=True)
-sqft = st.slider('Enter Square Feet', 300, 10000, 300)
+sqft = st.slider('Enter Square Feet', 400, 10000, 400)
 
 # Predict button
 if st.button('Predict Price'):
