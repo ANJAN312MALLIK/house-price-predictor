@@ -150,6 +150,7 @@ sqft = st.slider('Enter Square Feet', 400, 10000, 400)
 if st.button('Predict Price'):
     input_data = pd.DataFrame([[location, sqft, bath, bhk]], columns=['location', 'total_sqft', 'bath', 'bhk'])
     prediction = pipe.predict(input_data)[0] * 1e5
+    prediction = abs(prediction)  # Ensure prediction is positive
     st.markdown(f'<div class="prediction-output">Prediction: ₹{np.round(prediction, 2)}</div>', unsafe_allow_html=True)
 
      
