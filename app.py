@@ -62,6 +62,43 @@ st.markdown(
         font-size: 1.5em;
         margin-top: 20px;
     }
+
+    /* Responsive Design */
+    @media screen and (max-width: 600px) {
+        .header-title {
+            font-size: 1.8em;
+        }
+        .sub-title, .select-location, .prediction-output {
+            font-size: 1.2em;
+        }
+        .form-container {
+            padding: 15px;
+        }
+    }
+
+    @media screen and (min-width: 601px) and (max-width: 1200px) {
+        .header-title {
+            font-size: 2.2em;
+        }
+        .sub-title, .select-location, .prediction-output {
+            font-size: 1.4em;
+        }
+        .form-container {
+            padding: 25px;
+        }
+    }
+
+    @media screen and (min-width: 1201px) {
+        .header-title {
+            font-size: 2.5em;
+        }
+        .sub-title, .select-location, .prediction-output {
+            font-size: 1.5em;
+        }
+        .form-container {
+            padding: 30px;
+        }
+    }
     </style>
     """,
     unsafe_allow_html=True
@@ -93,7 +130,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.markdown('<h1 class="header-title">House Price Predictor</h1>', unsafe_allow_html=True)
+st.markdown('<h2 class="header-title">House Price Predictor</h2>', unsafe_allow_html=True)
 
 # Create a selectbox for locations
 st.markdown('<h3 class="select-location">Select the Location</h3>', unsafe_allow_html=True)
@@ -114,3 +151,5 @@ if st.button('Predict Price'):
     input_data = pd.DataFrame([[location, sqft, bath, bhk]], columns=['location', 'total_sqft', 'bath', 'bhk'])
     prediction = pipe.predict(input_data)[0] * 1e5
     st.markdown(f'<div class="prediction-output">Prediction: ₹{np.round(prediction, 2)}</div>', unsafe_allow_html=True)
+
+     
